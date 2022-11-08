@@ -1,5 +1,5 @@
 # Variáveis de ambiente
-$venvs = 'C:\Users\Everton Souza\.virtualenvs'
+$venvs = '~\.virtualenvs'
 
 
 # Aliases
@@ -23,7 +23,7 @@ function time {
 
 
 # Inicializa Oh My Posh
-$tema = 'C:\Users\Everton Souza\.config\powershell\themes\meutema.omp.toml'
+$tema = '~\.config\powershell\themes\meutema.omp.toml'
 oh-my-posh init pwsh --config $tema | Invoke-Expression
 
 
