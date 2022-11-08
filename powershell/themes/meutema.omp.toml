@@ -1,0 +1,58 @@
+#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+final_space = true
+version = 2.0
+
+[[blocks]]
+  alignment = "left"
+  type = "prompt"
+
+  [[blocks.segments]]
+    type = "session"
+    style = "diamond"
+    background = "#6272a4"
+    foreground = "#f8f8f2"
+    leading_diamond = "\ue0b6"
+    template = "{{ .UserName }} "
+
+  [[blocks.segments]]
+    type = "path"
+    style = "powerline"
+    powerline_symbol = "\ue0b0"
+    foreground = "#f8f8f2"
+    background = "#bd93f9"
+    # template = " {{ .Path }} "
+    [blocks.segments.properties]
+      style = "agnoster_full"
+
+  [[blocks.segments]]
+    type = "git"
+    style = "powerline"
+    background = "#ffb86c"
+    foreground = "#f8f8f2"
+    powerline_symbol = "\ue0b0"
+    template = " \ue725 ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}) "
+    [blocks.segments.properties]
+      branch_icon = ""
+      fetch_stash_count = true
+      fetch_status = false
+      fetch_upstream_icon = true
+    
+  [[blocks.segments]]
+    type = "python"
+    style = "powerline"
+    powerline_symbol = "\uE0B0"
+    foreground = "#100e23"
+    background = "#906cff"
+    template = " \uE235 {{ .Full }}"
+
+[[blocks]]
+  alignment = "left"
+  newline = true
+  type = "prompt"
+  [[blocks.segments]]
+    foreground = "lightGreen"
+    style = "plain"
+    template = "\u276f"
+    type = "text"
