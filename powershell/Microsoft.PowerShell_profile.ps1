@@ -1,0 +1,1 @@
+C:/Users/Everton Souza/OneDrive/Clicheria/Documentos/PowerShell/Microsoft.PowerShell_profile.ps1
