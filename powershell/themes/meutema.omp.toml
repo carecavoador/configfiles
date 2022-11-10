@@ -63,5 +63,5 @@ version = 2.0
   [[blocks.segments]]
     foreground = "lightGreen"
     style = "plain"
-    template = "\u276f"
+    template = "\u276f $:"
     type = "text"
