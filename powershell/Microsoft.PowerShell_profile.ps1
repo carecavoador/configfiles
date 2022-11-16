@@ -6,7 +6,6 @@ $venvs = '~\.virtualenvs'
 Set-Alias v nvim
 
 # FUNÇÕES
-# Contabiliza o tempo que um comando levou para executar
 function time {
     param (
         [Parameter(Mandatory=$false)]
@@ -22,9 +21,28 @@ function time {
 }
 
 
+function Buscar-Trabalhos {
+	param (
+		[Parameter(Mandatory=$false)]
+		[string]$opcoes
+	)
+	$python = "C:/Users/Everton Souza/.virtualenvs/busca_trabalhos-qFhn7DgV/Scripts/python"
+	$script = "C:/Users/Everton Souza/python/busca_trabalhos/main.py"
+	if ($opcoes){
+		& $python $script $opcoes
+	} else {
+		& $python $script
+	}
+}
+
+
 # Inicializa Oh My Posh
-$tema = '~\.config\powershell\themes\meutema.omp.toml'
-oh-my-posh init pwsh --config $tema | Invoke-Expression
+# $tema = '~\.config\powershell\themes\meutema.omp.toml'
+# oh-my-posh init pwsh --config $tema | Invoke-Expression
+
+
+# Inicializa o Starship Shell
+Invoke-Expression (&starship init powershell)
 
 
 # Terminal Icons

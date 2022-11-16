@@ -1,3 +1,6 @@
 {
-    "colorscheme": "dracula-tc"
+    "colorscheme": "monokai-dark",
+    "lsp.formatOnSave": false,
+    "lsp.ignoreTriggerCharacters": "completion,signature",
+    "lsp.server": "python=pyls,go=gopls,typescript=deno lsp,rust=rls"
 }
